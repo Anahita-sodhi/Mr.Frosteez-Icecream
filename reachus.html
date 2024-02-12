@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Us - Mr. Frosteez</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    a{
+    margin-inline: 13px;
+  }
+  .logo {
+    height: 130px;               
+    width:  130px;
+  }
+
+  #navbarNav {
+    font-size: 17px;
+    justify-content: space-evenly;
+    
+  }
+  #map {
+      position: relative;
+      padding-bottom: 56.25%; 
+      height: 0;
+    }
+     iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img class="logo" src="assets/mr.frosteezlogo.jpg"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="main.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="history.html">Our History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Products</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedbackform.html">Feedback</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="text-center">Visit Us</h2>
+      <p class="text-center">Find us on the map:</p>
+      <div id="map"class="embed-responsive embed-responsive-16by9">
+        <iframe  class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.0488331619344!2d75.5989846!3d31.3293395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a3bf3e37001%3A0xffcba03267562c72!2sBashirpura%2C%20Jalandhar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1660980749993!5m2!1sen!2sin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
