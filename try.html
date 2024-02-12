@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Mr. Frosteez</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(assets/icecream.avif);
+      background-size: cover;
+      background-attachment: fixed;
+      overflow-y: hidden;
+    }
+    
+    .logo {
+      height: 130px;
+      width: 130px;
+    }
+    #navbarNav {
+      font-size: 17px;
+      justify-content: space-evenly;
+    }
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .contact-card {
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      transition: transform 0.2s;
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+    .btn-call {
+      position: relative;
+      animation: ring 1.5s infinite;
+      transition: transform 0.2s;
+    }
+    .btn-call:hover {
+      transform: scale(1.05) rotate(-2deg);
+    }
+    @keyframes ring {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    } 
+    .gif-container {
+      text-align: center;
+      margin-top:-30px;
+      position: absolute; /* Added */
+      bottom: -50px; /* Adjust as needed */
+      left: -100px; /* Adjust as needed */
+      animation: moveGif 8s linear infinite; /* Added */
+    }
+    @keyframes moveGif {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(100% + 200px)); /* Adjust value based on GIF width */
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img class="logo" src="assets/mr.frosteezlogo.jpg"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">Our History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Products</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="reachus.html">Reach Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedbackform.html">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="gif-container">
+  <img src="assets/ice.gif" alt="Contact Us GIF" width="300">
+</div>
+  <div class="contact-container">
+    <div class="contact-card text-center">
+      
+      <h2 class="mb-4">Contact Us</h2>
+      <p>If you'd like to place an order, please give us a call:</p>
+      <a class="btn btn-primary btn-lg mt-3 btn-call">Call Now:  +91 (181) 291 3279</a>
+    </div>
+    
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

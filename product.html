@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+    .container1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding:150px;
+       overflow-x: hidden;
+    }
+    .container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+.product-card {
+    transition: transform 0.3s;
+    margin-bottom: 10px;
+   
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card:hover .card-text {
+    display: none;
+}
+
+.product-card:hover .card-info {
+    display: block;
+}
+
+    .particle {
+        width: 50px;
+        height: 50px;
+        top: -50px;
+        background-color:#edbac0;
+        position: absolute;
+        border-radius: 50%;
+        animation: fall 15s infinite;
+    }
+    @keyframes fall { 0% { top: -20%; }
+        20% { top: 0%; }
+        80% { top: 85%; }
+        100% { top: calc(100% + 100px); }
+    }
+    
+    .particle:nth-of-type(2n) {
+        width: 60px;
+        height: 60px;
+    }
+    .particle:nth-of-type(3n) {
+        width: 90px;
+        height: 90px;
+    }
+    .particle:nth-of-type(1) {
+        left: 1%;
+        animation-delay: 1s;
+    }
+    .particle:nth-of-type(2){
+     left:7%;
+     animation-delay: 2s;
+    }
+    .particle:nth-of-type(3){
+     left:17%;
+     animation-delay: 3s;
+    }
+    .particle:nth-of-type(4){
+     left:95%;
+     animation-delay: 4s;
+    }
+    .particle:nth-of-type(5){
+     left:98%;
+     animation-delay: 5s;
+    }
+    .particle:nth-of-type(6){
+     left:90%;
+     animation-delay: 6s;
+    }
+    .particle:nth-of-type(7){
+     left:85%;
+     animation-delay: 7s;
+    }
+    .particle:nth-of-type(8){
+     left:15%;
+     animation-delay: 8s;
+    }
+    .particle:nth-of-type(9){
+     left:8%;
+     animation-delay: 9s;
+    }
+    .particle:nth-of-type(10){
+     left:85%;
+     animation-delay: 10s;
+    }
+    .particle:nth-of-type(11){
+     left:2%;
+     animation-delay: 11s;
+    }
+    .particle:nth-of-type(12){
+     left:95%;
+     animation-delay: 12s;
+    }
+    .particle:nth-of-type(13){
+     left:85%;
+     animation-delay: 13s;
+    }
+    .particle:nth-of-type(14){
+     left:10%;
+     animation-delay: 14s;
+    }
+    .particle:nth-of-type(15){
+     left:35%;
+     animation-delay: 5s;
+    }
+    .particle:nth-of-type(16){
+     left:55%;
+     animation-delay: 3s;
+    }
+    .particle:nth-of-type(17){
+     left:45%;
+     animation-delay: 7s;
+    }
+    .particle:nth-of-type(18){
+     left:65%;
+     animation-delay: 5s;
+    }
+    .particle:nth-of-type(19){
+     left:70%;
+     animation-delay: 4s;
+    }
+    .particle:nth-of-type(20){
+     left:10%;
+     animation-delay: 14s;
+    }
+    
+    .border:nth-last-of-type(1){
+        top:0;
+        left:0;   
+    }
+    .border:nth-last-of-type(2){
+        bottom:0;
+        left:0;
+    }
+    
+  
+    #logo {
+      max-height: 100px;
+      max-width: 100px;
+      border-radius: 50%;
+      float: left;
+      margin-top:-5px;
+    }
+    .nav-icon {
+      position: absolute;
+      top: 20px;
+      right: 2px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+    .nav-line {
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+      margin-bottom: 7px;
+    }
+   
+   
+    .header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        color:#edbac0;
+        z-index: 2;
+        position:absolute;
+        background-color:#f9f6f7;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+        @media (max-width: 768px) {
+        .container1 {
+            padding: 50px; 
+        }
+        .particle {
+            display: none; 
+        }
+    
+        #logo{
+         
+            visibility: hidden;
+        }
+    }}
+</style>
+<body>
+    <header class="header">
+        <h1>Flavors that Melt Hearts <img id="logo" src="assets/mr.frosteezlogo.jpg" alt="icecream"></h1>
+        <div class="nav-icon" onclick="mainpage()">
+            <div class="nav-line"></div>
+            <div class="nav-line"></div>
+            <div class="nav-line"></div>
+        </div>
+    </header>
+
+    <div class="container1">
+        <div class="container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            
+              <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <a href ="contact.html" ><img src="forangebar.png" alt="Orange" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Orange Bar</h5>
+                        <p class="card-text">Price: 10.00Rs</p>
+                        <div class="card-info">
+                           <p>"Indulge in the refreshing burst of sunshine with our tantalizing orange ice bar, the perfect frozen treat for a zestful delight!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <a href ="contact.html" ><img src="fchocofeast.png" alt="Chocofeast" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">ChocoFeast</h5>
+                        <p class="card-text">Price: 20.00Rs</p>
+                        <div class="card-info">
+                            <p>Choco feast, a delightful sight,Choco hardcover, sweet and tight.Inside chococream , A true treat for all chocolate lovers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <a href ="contact.html" ><img src="fblueberry.png" alt="Blueberry" class="card-img-top"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Blueberry</h5>
+                        <p class="card-text">Price: 10.00Rs</p>
+                        <div class="card-info">
+                            <p>Our luscious Blueberry ice cream is made with real berries for a burst of fruity goodness in every bite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card product-card">
+                <a href ="contact.html" ><img src="fcola.png" alt="Cola" class="card-img-top"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Cola Bar</h5>
+                      <p class="card-text">Price: 10.00Rs</p>
+                      <div class="card-info">
+                          <p>"Quench your thirst and delight your taste buds with our fizzy cola ice bar, a cool and effervescent sensation in every icy bite!"</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <div class="col-md-4">
+            <div class="card product-card">
+                <a href ="contact.html" ><img src="fcassatta.png" alt="Chocofeast" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Cassatta</h5>
+                    <p class="card-text">Price:40.00Rs</p>
+                    <div class="card-info">
+                        <p>Cassata, a sweet delight,Layers of cake, creamy and bright.Fruit and nuts, a tasty blend, A dessert that's loved until the end</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card product-card">
+                <a href ="contact.html" ><img src="fchocovanilla.png" alt="Vanilla" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">ChocoVanilla</h5>
+                    <p class="card-text">Price:10.00Rs </p>
+                    <div class="card-info">
+                       <p>From dark to white, and milk between,A symphony of flavors seen. Chocolate Vanilla, a divine delight.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card product-card">
+            <a href ="contact.html" ><img src="fmangoduet.png" alt="Mango" class="card-img-top"></a>
+              <div class="card-body">
+                  <h5 class="card-title">Mango Duet</h5>
+                  <p class="card-text">Price: 20.00Rs</p>
+                  <div class="card-info">
+                      <p> our mango ice cream is a tropical treat for your taste buds . It's a refreshing blend of creamy goodness and the natural sweetness of mangoes, perfect for satisfying your summer cravings</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <div class="col-md-4">
+            <div class="card product-card">
+                <a href ="contact.html" ><img src="forangebar.png" alt="Orange" class="card-img-top"></a>aa
+                <div class="card-body">
+                    <h5 class="card-title">Orange Bar</h5>
+                    <p class="card-text">Price: 10.00Rs</p>
+                    <div class="card-info">
+                       <p>"Indulge in the refreshing burst of sunshine with our tantalizing orange ice bar, the perfect frozen treat for a zestful delight!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="col-md-4">
+        <div class="card product-card">
+            <a href ="contact.html" ><img src="fchocofeast.png" alt="Chocofeast" class="card-img-top"></a>
+            <div class="card-body">
+                <h5 class="card-title">ChocoFeast</h5>
+                <p class="card-text">Price: 25.00Rs</p>
+                <div class="card-info">
+                    <p>Indulge in the rich and decadent flavor of our Chocolate ice cream. A true treat for all chocolate lovers.chocolate inside chocolate outside</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+        <div class="card product-card">
+            <a href ="contact.html" ><img src="assets/3in1.png" style="height: 190px;" alt="Chocofeast" class="card-img-top"></a>
+            <div class="card-body">
+                <h5 class="card-title">Three In One</h5>
+                <p class="card-text">Price: 30.00Rs</p>
+                <div class="card-info">
+                    <p>Indulge in the three different flavor of our special ice cream. A true treat for all your sweet tooth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card product-card">
+          <a href ="contact.html" ><img src="fblueberry0.png" alt="Chocofeast" class="card-img-top"></a>
+          <div class="card-body">
+              <h5 class="card-title">ChocoFeast</h5>
+              <p class="card-text">Price: 25.00Rs</p>
+              <div class="card-info">
+                  <p>Indulge in the rich and decadent flavor of our Chocolate ice cream. A true treat for all chocolate lovers.</p>
+              </div>    
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card product-card">
+        <a href ="contact.html" ><img src="fchocofeast.png" alt="Chocofeast" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">ChocoFeast</h5>
+            <p class="card-text">Price: $6.49</p>
+            <div class="card-info">
+                <p>Indulge in the rich and decadent flavor of our Chocolate ice cream. A true treat for all chocolate lovers.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card product-card">
+      <a href ="contact.html" ><img src="fmangoduet.png" alt="Mango" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">Mango Duet</h5>
+            <p class="card-text">Price: 20.00Rs</p>
+            <div class="card-info">
+                <p>Indulge in the rich and decadent flavor of our Chocolate ice cream. A true treat for all chocolate lovers.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card product-card">
+       <a href ="contact.html" ><img src="fchocofeast.png" alt="Chocofeast" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">ChocoFeast</h5>
+            <p class="card-text">Price: 20.00Rs</p>
+            <div class="card-info">
+                <p>Indulge in the rich and decadent flavor of our Chocolate ice cream. A true treat for all chocolate lovers.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card product-card">
+        <a href ="contact.html" ><img src="fcassatta.png" alt="Chocofeast" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">Cassatta</h5>
+            <p class="card-text">Price:40.00Rs</p>
+            <div class="card-info">
+                <p>Cassata, a sweet delight,Layers of cake, creamy and bright.Fruit and nuts, a tasty blend, A dessert that's loved until the end</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card product-card">
+        <a href ="contact.html" ><img src="fchocovanilla.png" alt="Vanilla" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">ChocoVanilla</h5>
+            <p class="card-text">Price:10.00Rs </p>
+            <div class="card-info">
+               <p>From dark to white, and milk between,A symphony of flavors seen. Chocolate Vanilla, a divine delight.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card product-card">
+        <a href ="contact.html" ><img src="fblueberry.png" alt="Blueberry" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">Blueberry</h5>
+            <p class="card-text">Price: 10.00Rs</p>
+            <div class="card-info">
+                <p>Our luscious Blueberry ice cream is made with real berries for a burst of fruity goodness in every bite.</p>
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="col-md-4">
+    <div class="card product-card">
+        <a href ="contact.html" ><img src="fchocofeast.png" alt="Chocofeast" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">ChocoFeast</h5>
+            <p class="card-text">Price: 25.00Rs</p>
+            <div class="card-info">
+                <p>Indulge in the rich and decadent flavor of our Chocolate ice cream. A true treat for all chocolate lovers.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card product-card">
+        <a href ="contact.html" ><img src="forangebar.png" alt="Orange" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">Orange Bar</h5>
+            <p class="card-text">Price: 10.00Rs</p>
+            <div class="card-info">
+               <p>"Indulge in the refreshing burst of sunshine with our tantalizing orange ice bar, the perfect frozen treat for a zestful delight!"</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card product-card">
+      <a href ="contact.html" ><img src="fcola.png" alt="Cola" class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title">Cola Bar</h5>
+            <p class="card-text">Price: 10.00Rs</p>
+            <div class="card-info">
+                <p>"Quench your thirst and delight your taste buds with our fizzy cola ice bar, a cool and effervescent sensation in every icy bite!"</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="col-md-4">
+  <div class="card product-card">
+      <a href ="contact.html" ><img src="fcassatta.png" alt="Chocofeast" class="card-img-top"></a>
+      <div class="card-body">
+          <h5 class="card-title">Cassatta</h5>
+          <p class="card-text">Price:40.00Rs</p>
+          <div class="card-info">
+              <p>Cassata, a sweet delight,Layers of cake, creamy and bright.Fruit and nuts, a tasty blend, A dessert that's loved until the end</p>
+          </div>
+      </div>
+  </div>
+</div>
+        </div>
+    </div>
+            
+    </div>
+        </div>
+        
+    <script>
+        function mainpage() {
+          window.location.href = "main.html"; 
+        }
+      </script>
+</body>
+</html>
